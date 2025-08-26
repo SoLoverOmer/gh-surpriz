@@ -18,10 +18,10 @@
             justify-content: center;
             align-items: center;
             font-family: 'Pacifico', sans-serif;
-            background-color: #000; /* Başlangıç rengi siyah */
+            background-color: #000;
             user-select: none;
             flex-direction: column;
-            transition: background-color 0.5s ease-in-out; /* Renk geçişi için animasyon */
+            transition: background-color 0.5s ease-in-out;
         }
 
         .background-image-container {
@@ -410,7 +410,7 @@
                 document.body.style.display = "flex";
             } else {
                 alert("Yanlış şifre! Lütfen tekrar deneyin.");
-                window.location.reload(); 
+                window.location.reload();
             }
         }
     </script>
@@ -601,7 +601,8 @@
 
         function createHeartVolcano() {
             heartVolcanoInterval = setInterval(() => {
-                for (let i = 0; i < 5; i++) {
+                // Kalp miktarını 5'ten 3'e düşürdük
+                for (let i = 0; i < 3; i++) {
                     const heart = document.createElement('span');
                     heart.classList.add('volcano-heart');
                     heart.innerHTML = hearts[(Math.floor(Math.random() * hearts.length))];
@@ -663,7 +664,8 @@
         }
 
         function createFinalExplosion(xPos, yPos) {
-            const explosionCount = 300;
+            // Patlama miktarını 300'den 50'ye düşürdük
+            const explosionCount = 50;
             for (let i = 0; i < explosionCount; i++) {
                 const explosionHeart = document.createElement('span');
                 explosionHeart.classList.add('explosion-particle');
@@ -700,7 +702,7 @@
             const centerX = heartRect.left + heartRect.width / 2;
             const centerY = heartRect.top + heartRect.height / 2;
 
-            if (randomNumber < 0.5) { 
+            if (randomNumber < 0.5) {
                 loveMessage.style.left = `${centerX}px`;
                 loveMessage.style.top = `${centerY}px`;
                 loveMessage.classList.add('show');
@@ -715,7 +717,8 @@
         }
 
         function createHeartBubbles(x, y) {
-            for (let i = 0; i < 10; i++) {
+            // Kalp miktarını 10'dan 5'e düşürdük
+            for (let i = 0; i < 5; i++) {
                 const bubble = document.createElement('div');
                 bubble.classList.add('heart-bubble');
                 bubble.innerHTML = '❤️';
@@ -729,7 +732,8 @@
         }
 
         function createMiniHeartExplosion(x, y) {
-            for (let i = 0; i < 20; i++) {
+            // Kalp miktarını 20'den 10'a düşürdük
+            for (let i = 0; i < 10; i++) {
                 const miniHeart = document.createElement('div');
                 miniHeart.classList.add('mini-heart');
                 miniHeart.innerHTML = '❤️';
@@ -749,7 +753,8 @@
         }
 
         function createBigHeartExplosion(x, y) {
-            for (let i = 0; i < 15; i++) {
+            // Kalp miktarını 15'ten 8'e düşürdük
+            for (let i = 0; i < 8; i++) {
                 const bigHeart = document.createElement('div');
                 bigHeart.classList.add('big-explosion-heart');
                 bigHeart.innerHTML = '❤️';
